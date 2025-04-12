@@ -1,0 +1,40 @@
+.registration-card{
+    max-width: 500px;
+    margin:auto;
+    padding: 20px;
+}
+
+mat-form-field{
+    width:100%;
+}
+
+mat-radio-group{
+    width:100%;
+}
+.registration-spacer{
+    flex: 1 1 auto;
+}
+
+.radio-group{
+    display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+.radio-button {
+    margin: 2px;
+  }
+
+.mat-action-row {
+    place-content: space-between;
+}
+
+@media (max-width: 600px) {
+    .registration-card{
+        padding: 10px;
+    }
+    
+    mat-form-field{
+        width:100%;
+    }
+}

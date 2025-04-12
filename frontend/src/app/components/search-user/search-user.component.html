@@ -1,0 +1,85 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="menu-icon">
+        <mat-icon> directions_run</mat-icon>
+    </button>
+    <span>Tiruppur Runners</span>
+    <span class="registration-spacer"></span>
+</mat-toolbar>
+<div class="container">
+    <h1 mat-title> Get Registered User Detail</h1>
+  <div class="admin-form">
+    <mat-form-field class="admin-form-input" appearance="fill">
+      <mat-label>Enter the Name</mat-label>
+      <input matInput type="text" [(ngModel)]="registrationProfile.name">
+    </mat-form-field>
+    <mat-form-field class="admin-form-input" appearance="fill">
+        <mat-label>Enter the Phone-Number</mat-label>
+        <input matInput type="number" [(ngModel)]="registrationProfile.contactNumber">
+    </mat-form-field>
+    <mat-form-field class="admin-form-input" appearance="fill">
+        <mat-label>Enter the Email</mat-label>
+        <input matInput type="email" [(ngModel)]="registrationProfile.email">
+    </mat-form-field>
+</div>
+<div class="content-right" [align]="'end'">
+  <button mat-raised-button color="primary" (click)="onGetDetails()">Get details</button>
+</div>
+
+<h1 mat-title> User details are below:</h1>
+<div class="div-class">
+    <label class="label-class">Name</label>
+    <span>: {{registrationProfile.name}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class">Email</label>
+    <span>: {{registrationProfile.email}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Contact Number</label>
+    <span>: {{registrationProfile.contactNumber}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Name On The BIB</label>
+    <span>: {{registrationProfile.nameOnTheBib}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class"> Gender</label>
+    <span>: {{registrationProfile.gender}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class">Date Of Birth</label>
+    <span>: {{registrationProfile.dob}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class">Address</label>
+    <span>: {{registrationProfile.street}}</span>
+    <span> {{registrationProfile.city}}</span>
+    <span> {{registrationProfile.state}} - {{registrationProfile.pincode}}</span>
+
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Emergency Contact Name</label>
+    <span>: {{registrationProfile.emergencyContactName}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Emergency Contact Number</label>
+    <span>: {{registrationProfile.emergencyContactNumber}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class">T Shirt size</label>
+    <span>: {{registrationProfile.tshirtSize}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Name of your running group</label>
+    <span>: {{registrationProfile.nameOfYourGroup}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Breakfast</label>
+    <span>: {{registrationProfile.breakfast}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Blood group</label>
+    <span>: {{registrationProfile.bloodGroup}}</span>
+  </div>
+
+</div>

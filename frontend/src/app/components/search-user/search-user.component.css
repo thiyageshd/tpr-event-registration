@@ -1,0 +1,25 @@
+.container{
+    max-width:1000px;
+    margin:0 auto;
+  }
+  .admin-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top:10px;
+  }
+  .admin-form-input{
+    width: 30%;
+  }
+  .div-class{
+    margin-bottom: 10px;
+}
+
+.label-class{
+    display: inline-block;
+    width: 250px;
+
+}
+.content-right{
+  margin-bottom: 10px;
+}
