@@ -24,4 +24,4 @@ class DynamoDBResource:
         self.table = self.dynamodb.Table(settings.DYNAMODB_TABLE)
 
     def get_resource(self):
-        return self.resource
+        return self.dynamodb

@@ -12,3 +12,4 @@ class Container(containers.DeclarativeContainer):
     dynamodb_service = providers.Singleton(UserDAO)
     payment_service = providers.Singleton(PaymentService)
     communication_service = providers.Singleton(CommunicationService)
+    

@@ -1,3 +1,3 @@
-from .request import UserRegistration
+from .request import UserRegistration, PaymentCallbackRequest
 
-__all__ = ["UserRegistration"]
+__all__ = ["UserRegistration", "PaymentCallbackRequest"]
