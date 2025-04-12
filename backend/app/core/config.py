@@ -1,15 +1,17 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
+from typing import Optional
 
 class Settings(BaseSettings):
-    RAZORPAY_KEY_ID: str
-    RAZORPAY_KEY_SECRET: str
-    AWS_ACCESS_KEY_ID: str
-    AWS_SECRET_ACCESS_KEY: str
-    AWS_REGION: str = "us-west-2"
-    DYNAMODB_TABLE: str = "RunningEventRegistrations"
+    PHONEPE_CLIENT_ID: Optional[str] = "TEST-M22HO8VO83W1L_25041"
+    PHONEPE_CLIENT_SECRET: Optional[str] = "MWM3M2ExN2UtMGFlMS00ZDZmLWI5ZmMtYzI5ZWJmNmJlYWNl"
+    PHONEPE_BASE_URL: Optional[str] = "https://api-preprod.phonepe.com/apis/pg-sandbox"
+    BASE_URL: Optional[str] = "https://api-preprod.phonepe.com/apis/pg-sandbox"
+    AWS_ACCESS_KEY_ID: Optional[str]
+    AWS_SECRET_ACCESS_KEY: Optional[str]
+    AWS_REGION: Optional[str] = "eu-north-1"
+    DYNAMODB_TABLE: Optional[str] = "RunningEventRegistrations"
     API_KEY: str
-
-    class Config:
-        env_file = ".env"
+    
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
 settings = Settings()

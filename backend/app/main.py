@@ -8,6 +8,7 @@ from app.core.logging import setup_logging
 def create_app() -> FastAPI:
     container = Container()
     container.config.from_pydantic(settings)
+    container.wire(modules=["app.api.registration"])
 
     app = FastAPI()
     app.container = container
