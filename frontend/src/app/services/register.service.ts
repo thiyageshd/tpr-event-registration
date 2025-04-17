@@ -24,8 +24,14 @@ export class RegisterService {
         return this.httpClient.post<any>(AppConfig.registerUrl,signUp,{headers:headerDict});
     }
 
-    getUser(data: any){
-        return this.httpClient.post<any>(AppConfig.getUserUrl,data);
+    getUser(phone_number: String, name:String){
+        const headerDict ={
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'X-API-Key':'test'
+        }
+        return this.httpClient.get<any>(AppConfig.getUserUrl+"/"+phone_number+"/"+name,{headers:headerDict});
     }
 
 

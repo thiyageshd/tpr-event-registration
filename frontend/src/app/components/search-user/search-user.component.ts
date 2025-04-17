@@ -23,8 +23,7 @@ export class SearchUserComponent {
   onGetDetails(){
     this.searchValues[0]=this.requestProfile.name;
     this.searchValues[1]=this.requestProfile.phone_number;
-    this.searchValues[2]=this.requestProfile.email;
-    this.registerService.getUser(this.searchValues).subscribe( {
+    this.registerService.getUser(this.requestProfile.phone_number,this.requestProfile.name).subscribe( {
       next:(res)=>{
         console.log('User' , res);
         this.requestProfile=res;

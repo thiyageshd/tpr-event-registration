@@ -16,10 +16,6 @@
         <mat-label>Enter the Phone-Number</mat-label>
         <input matInput type="number" [(ngModel)]="requestProfile.phone_number">
     </mat-form-field>
-    <mat-form-field class="admin-form-input" appearance="fill">
-        <mat-label>Enter the Email</mat-label>
-        <input matInput type="email" [(ngModel)]="requestProfile.email">
-    </mat-form-field>
 </div>
 <div class="content-right" [align]="'end'">
   <button mat-raised-button color="primary" (click)="onGetDetails()">Get details</button>

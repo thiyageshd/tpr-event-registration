@@ -33,12 +33,14 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 //Components
 import { RegistrationComponent } from './components/registration/registration.component';
 import { SearchUserComponent } from './components/search-user/search-user.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    SearchUserComponent
+    SearchUserComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
