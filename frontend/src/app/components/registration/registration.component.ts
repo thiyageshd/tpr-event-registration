@@ -54,8 +54,8 @@ export class RegistrationComponent {
     this.requestProfile.pincode=String(this.registrationForm.get("pincode")?.value);
     this.requestProfile.state=this.registrationForm.get("state")?.value;
     this.requestProfile.name_on_the_bib=this.registrationForm.get("nameOnTheBib")?.value;
-    this.requestProfile.event_type='21km';
-    this.requestProfile.amount=1000;
+    this.requestProfile.event_type=this.registerService.getSelectedKilometer();
+    this.requestProfile.amount=this.registerService.getTotalAmount();
     this.requestProfile.t_shirt_size=this.registrationForm.get("tshirtSize")?.value;
     this.requestProfile.name_of_your_group=this.registrationForm.get("nameOfYourGroup")?.value;
     this.requestProfile.breakfast=this.registrationForm.get("breakfast")?.value;

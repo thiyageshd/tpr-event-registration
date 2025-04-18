@@ -1,0 +1,44 @@
+.registration-spacer{
+    flex: 1 1 auto;
+}
+
+.container{
+    max-width:1000px;
+    margin:0 auto;
+}
+.radioClass{
+    margin-top: 20px;
+}
+.div-class{
+    margin-bottom: 10px;
+}
+
+.label-class{
+    display: inline-block;
+    width: 550px;
+
+}
+
+.mat-action-row {
+    place-content: space-between;
+}
+.next-button-class{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 345px;
+}
+
+@media (max-width: 600px) {
+    .label-class{
+        display: inline-block;
+        width: 250px;
+    
+    }
+    .next-button-class{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        padding-right: 45px;
+    }
+}

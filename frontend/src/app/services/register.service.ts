@@ -10,9 +10,28 @@ import { RequestProfile } from "../model/registration-profile";
 
 export class RegisterService {
 
+    totalAmount!:number;
+    selectedKilometer!:string;
+
     constructor(private httpClient:HttpClient){
 
     }
+
+    getTotalAmount(){
+        return this.totalAmount;
+    }
+    
+    setTotalAmount(totalAmount:any){
+        this.totalAmount=totalAmount;
+    }
+
+      getSelectedKilometer(){
+        return this.selectedKilometer;
+      }
+    
+      setSelectedKilometer(selectedKilometer:any){
+        this.selectedKilometer=selectedKilometer;
+      }
 
     registerUser(signUp: RequestProfile){
         const headerDict ={
