@@ -3,6 +3,7 @@ import { RequestProfile } from 'src/app/model/registration-profile';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NativeDateAdapter } from '@angular/material/core';
 import { RegisterService } from 'src/app/services/register.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -11,7 +12,8 @@ import { RegisterService } from 'src/app/services/register.service';
 })
 export class RegistrationComponent {
 
-  constructor(private formBuilder:FormBuilder,
+  constructor(private router: Router,
+    private formBuilder:FormBuilder,
     private dateAdapter: NativeDateAdapter,
     private registerService:RegisterService) {}
 
@@ -75,7 +77,7 @@ export class RegistrationComponent {
 }
 
 onBack(){
-
+  this.router.navigate(["landing-page"]);
 }
   
 }
