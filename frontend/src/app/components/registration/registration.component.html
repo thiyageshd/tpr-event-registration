@@ -1,0 +1,109 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="menu-icon">
+        <mat-icon> directions_run</mat-icon>
+    </button>
+    <span>Tiruppur Runners</span>
+    <span class="registration-spacer"></span>
+</mat-toolbar>
+
+<mat-card class="registration-card">
+    <mat-card-title>Registration Information</mat-card-title>
+    <form [formGroup]="registrationForm">
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Contact Number</mat-label>
+        <input matInput type="number" formControlName="contactNumber">
+    </mat-form-field>
+        <mat-label>Gender</mat-label>
+        <mat-radio-group class="radio-group" formControlName="gender">
+          <mat-radio-button class="radio-button" value="male">Male</mat-radio-button>
+          <mat-radio-button class="radio-button" value="female">Female</mat-radio-button>
+          </mat-radio-group>
+      <mat-form-field class="runner-form-input" appearance="fill">
+        <mat-label>Date Of Birth</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dob">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Street</mat-label>
+        <input matInput type="text" formControlName="street">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>City</mat-label>
+        <input matInput type="text" formControlName="city">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Pincode</mat-label>
+        <input matInput type="number" formControlName="pincode">
+    </mat-form-field>
+    <mat-form-field class="registration-form-input" appearance="fill">
+        <mat-label>State</mat-label>
+        <mat-select formControlName="state">
+          <mat-option value="tamilNadu">TamilNadu</mat-option>
+          <mat-option value="kerala">Kerala</mat-option>
+          </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Name On The BIB</mat-label>
+        <input matInput type="text" formControlName="nameOnTheBib">
+    </mat-form-field>
+    <mat-form-field class="registration-form-input" appearance="fill">
+        <mat-label>T Shirt size</mat-label>
+        <mat-select formControlName="tshirtSize">
+          <mat-option value="s">S</mat-option>
+          <mat-option value="m">M</mat-option>
+          <mat-option value="l">L</mat-option>
+          <mat-option value="xl">XL</mat-option>
+          <mat-option value="xxl">XXL</mat-option>
+          <mat-option value="xxxl">XXXL</mat-option>
+          </mat-select>
+      </mat-form-field>
+      <mat-form-field class="registration-form-input" appearance="fill">
+        <mat-label>Name of your running group</mat-label>
+        <mat-select formControlName="nameOfYourGroup">
+          <mat-option value="coimbatoreRunners">Coimbatore Runners</mat-option>
+          <mat-option value="Bailwan">Bailwan Runners</mat-option>
+          <mat-option value="happyFeet">Happy-feet-CBE</mat-option>
+          <mat-option value="kangeyam">Kangeyam Runners</mat-option>
+          </mat-select>
+      </mat-form-field>
+      <mat-label>Breakfast</mat-label>
+      <mat-radio-group class="radio-group" formControlName="breakfast">
+        <mat-radio-button class="radio-button" value="veg">Veg</mat-radio-button>
+        <mat-radio-button class="radio-button" value="nonVeg">Non-Veg</mat-radio-button>
+        </mat-radio-group>
+        <mat-form-field class="registration-form-input" appearance="fill">
+            <mat-label>Blood Group</mat-label>
+            <mat-select formControlName="bloodGroup">
+              <mat-option value="aPositive">A+ve</mat-option>
+              <mat-option value="aNegative">A-ve</mat-option>
+              <mat-option value="bPositive">B+ve</mat-option>
+              <mat-option value="bNegative">B-ve</mat-option>
+              <mat-option value="oPositive">O+ve</mat-option>
+              <mat-option value="oNegative">O-ve</mat-option>
+              </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Emergency Contact Name</mat-label>
+            <input matInput type="text" formControlName="emergencyContactName">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Emergency Contact Number</mat-label>
+            <input matInput type="number" formControlName="emergencyContactNumber">
+        </mat-form-field>
+        <mat-checkbox  formControlName="termsAndCondition">I agree to terms & conditions</mat-checkbox>
+    </form>
+        <mat-action-row align ="end" >
+            <button style="margin-left:10px" mat-button color="warn" (click)="onBack()">Back</button>
+            <button mat-raised-button color="primary" class="registerButton" (click)="onSubmit()">Register</button>
+          </mat-action-row>
+
+</mat-card>

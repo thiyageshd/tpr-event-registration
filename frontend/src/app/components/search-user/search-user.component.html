@@ -1,0 +1,81 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="menu-icon">
+        <mat-icon> directions_run</mat-icon>
+    </button>
+    <span>Tiruppur Runners</span>
+    <span class="registration-spacer"></span>
+</mat-toolbar>
+<div class="container">
+    <h1 mat-title> Get Registered User Detail</h1>
+  <div class="admin-form">
+    <mat-form-field class="admin-form-input" appearance="fill">
+      <mat-label>Enter the Name</mat-label>
+      <input matInput type="text" [(ngModel)]="requestProfile.name">
+    </mat-form-field>
+    <mat-form-field class="admin-form-input" appearance="fill">
+        <mat-label>Enter the Phone-Number</mat-label>
+        <input matInput type="number" [(ngModel)]="requestProfile.phone_number">
+    </mat-form-field>
+</div>
+<div class="content-right" [align]="'end'">
+  <button mat-raised-button color="primary" (click)="onGetDetails()">Get details</button>
+</div>
+
+<h1 mat-title> User details are below:</h1>
+<div class="div-class">
+    <label class="label-class">Name</label>
+    <span>: {{requestProfile.name}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class">Email</label>
+    <span>: {{requestProfile.email}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Contact Number</label>
+    <span>: {{requestProfile.phone_number}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Name On The BIB</label>
+    <span>: {{requestProfile.name_on_the_bib}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class"> Gender</label>
+    <span>: {{requestProfile.gender}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class">Date Of Birth</label>
+    <span>: {{requestProfile.dob}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class">Address</label>
+    <span>: {{requestProfile.street}}</span>
+    <span> {{requestProfile.city}}</span>
+    <span> {{requestProfile.state}} - {{requestProfile.pincode}}</span>
+
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Emergency Contact Name</label>
+    <span>: {{requestProfile.emergency_contact_name}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Emergency Contact Number</label>
+    <span>: {{requestProfile.emergency_contact_number}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class">T Shirt size</label>
+    <span>: {{requestProfile.t_shirt_size}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Name of your running group</label>
+    <span>: {{requestProfile.name_of_your_group}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Breakfast</label>
+    <span>: {{requestProfile.breakfast}}</span>
+  </div>
+  <div class="div-class">
+    <label class="label-class" >Blood group</label>
+    <span>: {{requestProfile.blood_group}}</span>
+  </div>
+
+</div>
